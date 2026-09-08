@@ -1,0 +1,32 @@
+# Python runtime and test artifacts
+__pycache__/
+*.py[cod]
+.coverage
+htmlcov/
+.pytest_cache/
+.venv/
+venv/
+
+# Private application data and user exports
+data/
+*.sqlite3
+*.sqlite3-*
+forecast-studio-backup*.json
+forecast-payments*.csv
+forecast-balance*.csv
+
+# Local verification artifacts
+qa/*.png
+qa/browser-report.json
+qa/test-results.txt
+
+# The original supplied brief is retained locally until its publication rights
+# are confirmed. docs/PROJECT_BRIEF.md is the public, repository-safe summary.
+specification.txt
+
+# Tooling and operating-system files
+node_modules/
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

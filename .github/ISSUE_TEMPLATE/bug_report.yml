@@ -1,0 +1,56 @@
+name: Bug report
+description: Report a reproducible problem using fictional data only.
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not upload a real database, backup, export, or financial screenshot. Replace all names, amounts, dates, and notes with fictional examples.
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      placeholder: "1.0.0"
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Financial calculation
+        - Dates or schedules
+        - Saving, backup, or import
+        - Browser interface
+        - Export
+        - Startup
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Fictional reproduction
+      description: List the smallest set of fictional inputs and actions that reproduce the problem.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: Observed behavior
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy confirmation
+      options:
+        - label: I used only fictional data and did not attach a database, backup, or real financial export.
+          required: true

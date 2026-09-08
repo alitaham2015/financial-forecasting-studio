@@ -1,0 +1,37 @@
+# Financial Forecasting Studio
+
+> A local-first financial scenario modeller that evaluates daily cash feasibility separately from net present value.
+
+Version: 1.0.0
+Runtime: Python 3.11+ and a current browser
+Runtime dependencies: Python standard library only
+Data: local SQLite; private runtime data is excluded from version control
+
+## Start here
+
+- README.md: product overview, quick start, features, technology, privacy, and limitations
+- docs/PROJECT_BRIEF.md: problem, intended users, goals, non-goals, and success criteria
+- docs/ARCHITECTURE.md: components, local API, data flow, trust boundaries, and change guide
+- docs/FINANCIAL_DECISIONS.md: formulas, rounding, schedule conventions, and worked examples
+- docs/VERIFICATION.md: automated and browser verification evidence
+- docs/AI_CONTEXT.md: concise facts, terminology, constraints, and claim-to-evidence map
+- SECURITY.md: local security model and sensitive-data guidance
+- CONTRIBUTING.md: development and verification rules
+
+## Source map
+
+- studio/finance.py: deterministic validation and financial calculations
+- studio/dates.py: calendar schedules and 30E/360 day counts
+- studio/storage.py: SQLite documents, transactions, and revisions
+- studio/server.py: local HTTP interface and static-file serving
+- web/app.js: interface state, views, forms, and API integration
+- web/chart.js: SVG chart rendering and interaction
+- tests/: 87 automated tests
+
+## Important invariants
+
+- Monetary calculations remain in Python Decimal.
+- Monetary JSON values remain strings.
+- Opening cash affects liquidity but is excluded from NPV.
+- The server remains loopback-only.
+- Real scenario databases and exports are never committed.

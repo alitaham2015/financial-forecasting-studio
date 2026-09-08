@@ -1,0 +1,15 @@
+{
+  "format": "financial-forecasting-studio",
+  "version": 1,
+  "scenarios": [
+    {
+      "name": "Import verification plan",
+      "start": "2026-01-01",
+      "end": "2027-12-31",
+      "openingCash": "10.00",
+      "discountRate": "5",
+      "currency": "USD",
+      "objects": []
+    }
+  ]
+}
